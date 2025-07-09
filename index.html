@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tit for Tat Dilemma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tit for Tat Dilemma Game</h1>
+        <p class="description">Play against the **Most Advanced AI** in the Iterated Prisoner's Dilemma!</p>
+
+        <div class="rules">
+            <h2>Game Rules (Payoffs):</h2>
+            <ul>
+                <li><strong>You C, AI C:</strong> Both get 3 points.</li>
+                <li><strong>You C, AI D:</strong> You get 0, AI gets 5.</li>
+                <li><strong>You D, AI C:</strong> You get 5, AI gets 0.</li>
+                <li><strong>You D, AI D:</strong> Both get 1 point.</li>
+            </ul>
+            <p class="ai-info">
+                This AI learns and adapts! It switches between multiple strategies (Tit for Tat, Grudger, Always Defect, etc.) based on your behavior, its performance, and the game phase. Can you predict its next move?
+            </p>
+        </div>
+
+        <div class="game-info">
+            <p>Round: <span id="current-round">1</span> / <span id="total-rounds">30</span></p>
+            <p>Your Score: <span id="player-score">0</span></p>
+            <p>AI Score: <span id="ai-score">0</span></p>
+            <p>Your Last Move: <span id="player-last-move">N/A</span></p>
+            <p>AI's Last Move: <span id="ai-last-move">N/A</span></p>
+            <p>AI's Current Strategy: <span id="ai-strategy">Tit for Tat</span></p>
+            <p class="small-text">Reason: <span id="strategy-reason">Initial strategy.</span></p>
+        </div>
+
+        <div class="game-message">
+            <p id="message">Welcome! Choose your first move.</p>
+        </div>
+
+        <div class="controls">
+            <button id="cooperate-btn">Cooperate (C)</button>
+            <button id="defect-btn">Defect (D)</button>
+            <button id="reset-btn" class="hidden">Play Again</button>
+        </div>
+
+        <div class="final-result hidden" id="final-result-section">
+            <h2>Game Over!</h2>
+            <p id="final-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

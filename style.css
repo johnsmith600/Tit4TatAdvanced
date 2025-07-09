@@ -1,0 +1,346 @@
+/* General Body and Container Styling */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    /* Lively, soft, and inviting gradient for the background */
+    background: linear-gradient(135deg, #FFDAB9 0%, #ADD8E6 100%); /* Peach to Light Blue */
+    color: #333; /* Standard dark text for readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: #FFFFFF; /* Crisp white for the main container */
+    border-radius: 25px; /* Even more rounded corners for a softer look */
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2); /* Deeper, more pronounced shadow */
+    padding: 50px 60px; /* Generous padding for content */
+    width: 100%;
+    max-width: 800px; /* Slightly wider for a more spacious feel */
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 0.6s ease-out; /* Slightly slower transition */
+}
+
+/* Headings and Descriptions */
+h1 {
+    color: #4B0082; /* Deep Indigo - rich and vibrant */
+    margin-bottom: 20px;
+    font-size: 3.2em; /* Larger, more commanding heading */
+    letter-spacing: -1px;
+    font-weight: 800; /* Extra bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+}
+
+.description {
+    font-size: 1.3em;
+    color: #6A5ACD; /* Medium Slate Blue - pleasant and readable */
+    margin-bottom: 40px;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+/* Rules Section */
+.rules {
+    /* Soft, warm, and inviting background for rules */
+    background-color: #FFFACD; /* Lemon Chiffon */
+    border: 1px solid #FFD700; /* Gold border for a touch of luxury */
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    text-align: left;
+    box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.05); /* Enhanced inner shadow */
+}
+
+.rules h2 {
+    color: #DAA520; /* Goldenrod - rich and earthy */
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 2px dashed #F0E68C; /* Softer, slightly thicker dashed separator */
+    padding-bottom: 15px;
+}
+
+.rules ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rules li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    display: flex;
+    align-items: flex-start;
+    color: #483D8B; /* Dark Slate Blue - good contrast on light background */
+}
+
+.rules li::before {
+    content: '★'; /* Star bullet point for a playful feel */
+    color: #FF6347; /* Tomato - bright and eye-catching */
+    font-weight: bold;
+    display: inline-block;
+    width: 1.2em;
+    margin-left: -1.2em;
+    margin-right: 0.8em;
+    font-size: 1.2em; /* Larger bullet */
+}
+
+.rules li strong {
+    color: #2F4F4F; /* Dark Slate Gray - strong contrast */
+}
+
+.ai-info {
+    font-size: 1em;
+    color: #663399; /* Rebecca Purple - distinct and fun */
+    margin-top: 20px;
+    line-height: 1.6;
+    font-style: italic;
+    background-color: #E0FFFF; /* Light Cyan - airy and cool */
+    border-radius: 10px;
+    padding: 12px 18px;
+    border: 1px solid #87CEEB; /* Sky Blue border */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Game Info Section */
+.game-info {
+    /* Lively but not distracting background for info */
+    background-color: #E6E6FA; /* Lavender - calming yet colorful */
+    border: 1px solid #DDA0DD; /* Plum border */
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    font-size: 1.15em;
+    text-align: left;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.game-info p {
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px dotted #B0E0E6; /* PowDerBlue dotted line */
+    color: #4682B4; /* Steel Blue - clear and professional */
+}
+
+.game-info p:nth-last-child(2),
+.game-info p:last-child {
+    border-bottom: none;
+}
+
+.game-info span {
+    font-weight: 800; /* Extra bold for values */
+    color: #8A2BE2; /* Blue Violet - strong accent */
+    margin-left: 10px;
+}
+
+.small-text {
+    font-size: 1em;
+    color: #7B68EE; /* Medium Slate Blue */
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dotted #B0C4DE; /* Light Steel Blue */
+}
+
+/* Game Message */
+.game-message {
+    /* Energetic, warm message background */
+    background-color: #FFEFD5; /* Papaya Whip - soft and warm */
+    border: 1px solid #FFA07A; /* Light Salmon - inviting */
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 40px;
+    font-size: 1.25em;
+    color: #FF6347; /* Tomato - vibrant alert color */
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Controls (Buttons) */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* More space between buttons */
+    margin-bottom: 40px;
+}
+
+.controls button {
+    color: white;
+    border: none;
+    border-radius: 15px; /* Very rounded buttons */
+    padding: 18px 35px; /* Larger, more tactile buttons */
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.2s ease, box-shadow 0.4s ease;
+    min-width: 180px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.controls button#cooperate-btn {
+    background-color: #4CAF50; /* Emerald Green - strong and positive */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.controls button#defect-btn {
+    background-color: #FF4500; /* Orange Red - bold and decisive */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.controls button#cooperate-btn:hover {
+    background-color: #66BB6A; /* Lighter emerald on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.controls button#defect-btn:hover {
+    background-color: #FF6347; /* Lighter orange red on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.controls button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.controls button:disabled {
+    background-color: #BDBDBD; /* Greyed out when disabled */
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+#reset-btn {
+    background-color: #1E90FF; /* Dodger Blue - energetic reset button */
+    margin-top: 30px;
+    min-width: 250px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#reset-btn:hover {
+    background-color: #4682B4; /* Steel Blue on hover */
+}
+
+/* Hidden Utility Class */
+.hidden {
+    display: none !important;
+}
+
+/* Final Result Section */
+.final-result {
+    /* Bright, triumphant green for success/end */
+    background-color: #90EE90; /* Light Green - fresh and positive */
+    border: 1px solid #3CB371; /* Medium Sea Green border */
+    border-radius: 15px;
+    padding: 35px;
+    margin-top: 40px;
+    color: #228B22; /* Forest Green text */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.final-result h2 {
+    color: #006400; /* Dark Green - strong and reassuring */
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.final-result p {
+    font-size: 1.5em;
+    font-weight: 800; /* Super bold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 35px 30px;
+        margin: 15px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .description {
+        font-size: 1.15em;
+    }
+
+    .rules h2 {
+        font-size: 1.8em;
+    }
+
+    .game-info {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .controls {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .controls button {
+        width: 100%;
+        min-width: unset;
+        font-size: 1.2em;
+        padding: 16px 30px;
+    }
+
+    .final-result h2 {
+        font-size: 2.2em;
+    }
+
+    .final-result p {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 25px 20px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .description {
+        font-size: 1em;
+    }
+
+    .rules h2 {
+        font-size: 1.5em;
+    }
+
+    .rules li {
+        font-size: 1em;
+    }
+
+    .game-info {
+        font-size: 1em;
+    }
+
+    .game-message {
+        font-size: 1.1em;
+    }
+
+    .controls button {
+        padding: 14px 25px;
+        font-size: 1.1em;
+    }
+}
